@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "Adventures",
+  "short_name": "Adventures",
+  "description": "Write the whole story, then go deeper, one fold at a time.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#efe8dc",
+  "theme_color": "#efe8dc",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

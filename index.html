@@ -5,8 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <meta name="theme-color" content="#efe8dc">
 <title>Adventures</title>
-<link rel="icon" type="image/png" href="adventures-logo.png">
-<link rel="apple-touch-icon" href="adventures-logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Adventures">
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script>
 // Apply the theme before first paint (stored choice, otherwise the device setting).
@@ -110,7 +114,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 #rail .rabbit {
   position: absolute; left: 50%; width: 34px; height: 40px; margin: -20px 0 0 -17px;
   top: calc((12 + var(--d) * 20) * 1%);
-  transform: rotate(calc(var(--d) * 26deg));
+  transform: rotate(calc(var(--d) * 60deg));
   transition: top .9s cubic-bezier(.55, 0, .2, 1), transform .9s cubic-bezier(.55, 0, .2, 1);
 }
 #rail .rabbit svg { width: 100%; height: 100%; display: block; overflow: visible; animation: bob 2.6s ease-in-out infinite; }
@@ -354,19 +358,15 @@ body.ro .card .top .title { padding-right: 0; }
   <div class="stop" style="--n:3"></div>
   <div class="hole"></div>
   <div class="rabbit">
-<svg class="rabbit-art"
-          viewBox="0 0 56 56"
-     width="800"
-     height="800"
-     xmlns="http://www.w3.org/2000/svg">
-  <path
-    d="M 16.4781 51.2340 C 19.8605 51.2340 22.9354 50.4743 25.4858 48.1771 C 26.4626 48.8825 27.5478 49.2804 29.1757 49.2804 C 30.7132 49.2804 31.9070 48.7740 34.0415 48.7740 C 36.0129 48.7740 36.9898 49.2804 38.5634 49.2804 C 42.2893 49.2804 43.5918 47.3631 43.5918 45.2469 C 43.5918 41.8282 40.9872 39.7843 35.7777 39.3321 C 37.6410 38.4277 39.3591 37.7223 40.5530 37.2882 C 42.7234 38.7352 45.8529 39.6034 48.1682 39.5853 C 53.0335 39.5492 56 38.0298 56 33.0194 C 56 26.8696 51.3332 22.2391 45.8348 22.1848 L 41.8914 16.8489 C 38.8890 12.8153 35.6692 10.5543 31.5452 10.5543 C 28.3437 10.5543 23.9845 12.3269 23.9845 14.8412 C 23.9845 16.9393 26.3721 18.4406 28.6873 19.9057 C 31.4006 21.6060 35.0724 23.7223 38.4730 25.6939 C 38.0026 26.1099 37.6769 26.2908 37.2069 26.2908 C 36.6642 26.2908 35.9225 26.0195 34.9639 25.4587 C 27.6383 21.3347 23.2791 17.9885 17.6357 17.9885 C 10.9251 17.9885 6.0775 21.4432 3.7804 28.0634 C 1.5375 28.5337 0 29.9988 0 32.2598 C 0 35.0634 2.2610 36.5104 4.5943 36.6370 C 6.3308 39.4406 11.1240 41.9187 17.2920 41.4122 L 19.0104 42.8412 C 18.5582 43.0763 18.1240 43.1487 17.5995 43.1487 C 16.4057 43.1306 15.2662 42.7507 13.8915 42.7507 C 11.3773 42.7507 9.6047 44.2158 9.6047 46.4045 C 9.6047 49.4975 12.3540 51.2340 16.4781 51.2340 Z"
-    fill="#ffffff"
-    stroke="#000000"
-    stroke-width="1"
-    stroke-linejoin="round"
-  />
-</svg>
+    <svg viewBox="0 0 40 48">
+	  <path
+		d="M 16.4781 51.2340 C 19.8605 51.2340 22.9354 50.4743 25.4858 48.1771 C 26.4626 48.8825 27.5478 49.2804 29.1757 49.2804 C 30.7132 49.2804 31.9070 48.7740 34.0415 48.7740 C 36.0129 48.7740 36.9898 49.2804 38.5634 49.2804 C 42.2893 49.2804 43.5918 47.3631 43.5918 45.2469 C 43.5918 41.8282 40.9872 39.7843 35.7777 39.3321 C 37.6410 38.4277 39.3591 37.7223 40.5530 37.2882 C 42.7234 38.7352 45.8529 39.6034 48.1682 39.5853 C 53.0335 39.5492 56 38.0298 56 33.0194 C 56 26.8696 51.3332 22.2391 45.8348 22.1848 L 41.8914 16.8489 C 38.8890 12.8153 35.6692 10.5543 31.5452 10.5543 C 28.3437 10.5543 23.9845 12.3269 23.9845 14.8412 C 23.9845 16.9393 26.3721 18.4406 28.6873 19.9057 C 31.4006 21.6060 35.0724 23.7223 38.4730 25.6939 C 38.0026 26.1099 37.6769 26.2908 37.2069 26.2908 C 36.6642 26.2908 35.9225 26.0195 34.9639 25.4587 C 27.6383 21.3347 23.2791 17.9885 17.6357 17.9885 C 10.9251 17.9885 6.0775 21.4432 3.7804 28.0634 C 1.5375 28.5337 0 29.9988 0 32.2598 C 0 35.0634 2.2610 36.5104 4.5943 36.6370 C 6.3308 39.4406 11.1240 41.9187 17.2920 41.4122 L 19.0104 42.8412 C 18.5582 43.0763 18.1240 43.1487 17.5995 43.1487 C 16.4057 43.1306 15.2662 42.7507 13.8915 42.7507 C 11.3773 42.7507 9.6047 44.2158 9.6047 46.4045 C 9.6047 49.4975 12.3540 51.2340 16.4781 51.2340 Z"
+		fill="#ffffff"
+		stroke="#000000"
+		stroke-width="1"
+		stroke-linejoin="round"
+	  />
+    </svg>
   </div>
 </aside>
 
@@ -1892,6 +1892,15 @@ window.ADV_FONTS={regular:"AAEAAAAPAIAAAwBwR0RFRgx7Eb8AAG/sAAAAlEdQT1PdPRILAABwg
   /* ================= Google sign-in (Google Identity Services, token model) ================= */
   var tokenClient = null, tokenWaiter = null, refreshing = null;
 
+  var gisInjected = 0;
+  function ensureGisScript() {
+    if (gisReady() || Date.now() - gisInjected < 6000) return;
+    gisInjected = Date.now();
+    var sc = document.createElement('script');
+    sc.src = 'https://accounts.google.com/gsi/client';
+    sc.async = true;
+    document.head.appendChild(sc);
+  }
   function gisReady() { return !!(window.google && google.accounts && google.accounts.oauth2); }
   function waitForGis(ms) {
     return new Promise(function (resolve) {
@@ -1927,7 +1936,7 @@ window.ADV_FONTS={regular:"AAEAAAAPAIAAAwBwR0RFRgx7Eb8AAG/sAAAAlEdQT1PdPRILAABwg
         }
       }
       if (gisReady()) go();
-      else waitForGis(8000).then(function (ok) { if (ok) go(); else reject({ type: 'gis_unavailable' }); });
+      else { ensureGisScript(); waitForGis(8000).then(function (ok) { if (ok) go(); else reject({ type: 'gis_unavailable' }); }); }
     });
   }
 
@@ -2135,15 +2144,15 @@ window.ADV_FONTS={regular:"AAEAAAAPAIAAAwBwR0RFRgx7Eb8AAG/sAAAAlEdQT1PdPRILAABwg
         function (e) { return { ok: false, status: (e && e.status) || 0, reason: (e && e.reason) || '', detail: (e && e.detail) || '' }; });
     }
     function say(x) {
-      return x.ok ? 'works' : x.status ? 'error ' + x.status + (x.reason ? ' (' + x.reason + ')' : '') : 'blocked before it reached Google';
+      return x.ok ? 'works' : x.status ? 'error ' + x.status + (x.reason ? ' (' + x.reason + ')' : '') : 'no answer the browser can read';
     }
     probe(true).then(function (a) {
       return probe(false).then(function (b) {
         var lines = ['Drive request, usual way: ' + say(a), 'Drive request, token in the address: ' + say(b)];
         if (a.ok) lines.push('Drive answers correctly. Press "Try again".');
-        else if (b.ok) lines.push('Only the usual kind of request is blocked. A browser extension, VPN or antivirus web shield is the common cause. Try a private window with extensions switched off.');
+        else if (b.ok) lines.push('Only the usual kind of request gets no readable answer. A browser extension, VPN or antivirus web shield is a common cause. Try a private window with extensions switched off.');
         else if (b.status) lines.push(describeSyncError({ status: b.status, reason: b.reason, detail: b.detail }));
-        else lines.push('Both kinds of request are blocked before they reach Google. Check extensions, VPN, antivirus web protection and the network, then try again.');
+        else lines.push('Neither request got an answer the browser can read. Either something on this device or network blocks Google Drive, or Google replied with an error that browsers are not allowed to read, which can happen while the Drive API is not enabled for the project. Check that "Google Drive API" shows as enabled in Google Cloud, then try a private window with extensions off.');
         if (mode === 'gate') setGate({ kind: 'idle', msg: keep.msg, retry: keep.retry, check: true, report: lines });
       });
     });
@@ -2443,6 +2452,7 @@ window.ADV_FONTS={regular:"AAEAAAAPAIAAAwBwR0RFRgx7Eb8AAG/sAAAAlEdQT1PdPRILAABwg
   }
 
   window.addEventListener('online', function () {
+    ensureGisScript();
     if (mode !== 'app') { render('none'); return; }
     applyAccessUI();
     if (tokenValid()) syncNow('online'); else refreshToken(true);
@@ -2562,6 +2572,13 @@ window.ADV_FONTS={regular:"AAEAAAAPAIAAAwBwR0RFRgx7Eb8AAG/sAAAAlEdQT1PdPRILAABwg
     if (sess && navigator.onLine !== false) startSignIn({ prompt: '', hint: sess.email, silent: true });
   }
   boot();
+
+  // lets the page open without a connection (the saved copy of the stories is then shown read-only)
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    window.addEventListener('load', function () {
+      try { navigator.serviceWorker.register('sw.js').catch(function () {}); } catch (e) {}
+    });
+  }
 })();
 </script>
 </body>
